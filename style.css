@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #674bb1;
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header section */
+
+header {
+    height: 140px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+header img {
+    width: 264px;
+    margin-left: 80px;
+}
+
+/* Hero section */
+
+.hero {
+    display: flex;
+    gap: 76px;
+    padding-top: 72px;
+    padding-left: 87px;
+}
+
+.hero img {
+    width: 696px;
+    height: 493px;
+}
+
+.hero .right {
+    width: 456px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero .right h1 {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 0;
+}
+
+.hero .right p {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.hero .right button {
+    padding: 18px 76px;
+    margin-right: 230px;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    color: #6e19e9;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s, opacity 0.1s;
+}
+
+.hero .right button:hover {
+    background-color: #e980e7;
+    color: white;
+}
+
+.hero .right button:active {
+    opacity: 0.75;
+}
+
+/* Footer section */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100px;
+}
+
+footer .social-media-links {
+    display: flex;
+    gap: 15px;
+    margin-right: 100px;
+}
+
+footer .social-media-links img {
+    cursor: pointer;
+    transition: opacity 0.1s;
+}
+
+footer .social-media-links img:hover {
+    filter: brightness(0) saturate(100%) invert(75%) sepia(71%) saturate(1448%) hue-rotate(236deg) brightness(91%) contrast(100%);
+}
+
+footer .social-media-links img:active {
+    opacity: 0.75;
+}
+
+/* Media queries */
+
+@media (max-width: 1100px) {
+
+    body {
+        background-image: url('images/bg-mobile.svg');
+        background-position: center;
+    }
+
+    header {
+        height: 85px;
+    }
+
+    header img {
+        width: 150px;
+        margin-left: 25px;
+    }
+
+    .hero {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        margin-top: 50px;
+        padding: 0;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .hero .left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero .left img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .hero .right {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero .right h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .hero .right p {
+        font-size: 14px;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .hero .right button {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    footer {
+        justify-content: center;
+    }
+
+    footer .social-media-links {
+        margin: 0;
+    }
+
+}
